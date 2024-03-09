@@ -1,30 +1,25 @@
-class problem43 {
-    static void leftrotate(int arr[], int d, int n){ 
-        d=d%n;
-        int temp[] = new int[n];
-        int a = 0;
-        for (int i = d; i < n; i++) {
-            temp[a] = arr[i];
-            a++;
-        }
-        for (int i = 0; i < d; i++) {
-            temp[a] = arr[i];
-            a++;
-        }
-        for (int i = 0; i < n; i++) {
-            arr[i] = temp[i];
-        }
+class problem43{
+    static void leftrotate(int arr[], int d, int n){
+        for (int i = 0; i < d; i++)
+            lrotate(arr, n);
     }
-    static void numbers(int arr[], int n){
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i]+" ");
-        }
+    static void lrotate(int arr[], int n){
+        int i, temp;
+        temp = arr[0];
+        for (i = 0; i < n - 1; i++)
+            arr[i] = arr[i + 1];
+        arr[i] = temp;
     }
-        public static void main (String[] args) {
-            int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
-            int n = arr.length;
-            int d = 2;
-            leftrotateotate(arr, d, n);
-            numbers(arr, n);
-        }
+    static void list(int arr[], int n){
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
     }
+    public static void main(String[] args){
+        problem43 rotate = new problem43();
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int d=2;
+        int n=arr.length;
+        rotate.leftrotate(arr,d,n);
+        rotate.list(arr,n);
+    }
+}
