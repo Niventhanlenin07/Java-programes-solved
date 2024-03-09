@@ -16,7 +16,7 @@ public class problem56 {
                 System.out.print(num+" ");
                 num++;
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
