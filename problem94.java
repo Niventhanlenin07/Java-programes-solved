@@ -1,25 +1,18 @@
 import java.util.Arrays;
-import java.util.Collections;
 class problem94{
-    static boolean areAnagram(char[] str1, char[] str2){
-        int n1 = str1.length;
-        int n2 = str2.length;
-        if (n1 != n2)
-            return false;
-        Arrays.sort(str1);
-        Arrays.sort(str2);
-        for (int i = 0; i < n1; i++)
-            if (str1[i] != str2[i])
-                return false;
-        return true;
-    }
     public static void main(String args[]){
-        char str1[] = {'a', 'm' };
-        char str2[] = {'i','a','m'};
-        if (areAnagram(str1, str2)){
-            System.out.println("Anagram");
-        }else{
-            System.out.println("Not anagram");
-        }    
+        String n1="hello";
+        String n2="elloh"; 
+        System.out.println(anaGram(n1,n2));  
     }
-}
+    public static boolean anaGram(String n1,String n2){
+        boolean value=false;
+        char[] arr1=n1.toCharArray();
+        char[] arr2=n2.toCharArray();
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        if(Arrays.equals(arr1,arr2)){
+            value=true;
+        }
+        return value;
+    }
