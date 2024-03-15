@@ -12,11 +12,11 @@ public class problem5 {
 
             for (int j=1;j<=i;j++){ 
 
-                System.out.printf("%C ",'A'-1+i); 
+                System.out.print((char)('A'-1+i)); 
 
             } 
 
-            System.out.printf("\n"); 
+            System.out.println(); 
 
         } 
 
