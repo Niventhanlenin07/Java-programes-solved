@@ -1,22 +1,16 @@
-import java.util.Scanner;
-public class problem48 {
-    public static void main(String[] args){
-        Scanner mynum=new Scanner(System.in);
-        System.out.print("enter n :");
-        int n=mynum.nextInt();
-        for (int i=n;i>=1;i--){
-            for (int j=1;j<i;j++){
+class problem48 {
+    public static void main(String[] args) {
+        for(int i=9;i>=1;i--){
+            for(int j=i-1;j>=1;j--){
                 System.out.print(" ");
-            }
-            for (int j=i;j>0;j++){
+            } 
+            for(int j=i;j<=9;j++){
                 System.out.print(j);
             }
-            for (int j=i;j<=n;j++){
-                if (i==j){
-                    continue;
-                }
+            for(int j=8;j>=i;j--){
+                    System.out.print(j);
+            }
             System.out.println();
         }
     }
-}
-}
+}  
