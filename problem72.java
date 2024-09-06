@@ -1,4 +1,4 @@
-public class Main {
+public class problem72 {
     public static int remove(int a[], int n){
         if (n == 0 || n == 1) {
             return n;

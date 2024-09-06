@@ -16,3 +16,4 @@ class problem94{
         }
         return value;
     }
+}    
