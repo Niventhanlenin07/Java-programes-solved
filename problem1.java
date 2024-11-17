@@ -3,7 +3,7 @@ public class problem1{
     public static void main(String[] args) { 
         Scanner mynum=new Scanner(System.in); 
 
-        System.out.println("enter n:"); 
+        System.out.println("enter n "); 
 
         int n=mynum.nextInt(); 
 
